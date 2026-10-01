@@ -724,349 +724,469 @@ a {
     }
 
 }
-/* =========================
+/* ========================================
    O ESCRITÓRIO
-========================= */
+======================================== */
 
 .about {
     position: relative;
-    padding: 120px 0;
+    padding: 130px 0 0;
     background: var(--navy);
     overflow: hidden;
 }
 
 
-/* detalhe decorativo */
+/* =====================
+   PARTE SUPERIOR
+===================== */
 
-.about::after {
-    content: "CM";
-
-    position: absolute;
-
-    right: -40px;
-    bottom: -130px;
-
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 380px;
-    font-weight: 700;
-
-    color: rgba(255,255,255,.025);
-
-    pointer-events: none;
-}
-
-
-.about-container {
-
+.about-top {
     display: grid;
-
-    grid-template-columns: .9fr 1.1fr;
-
+    grid-template-columns: .85fr 1.15fr;
     gap: 100px;
-
     align-items: center;
-
 }
 
 
-/* IMAGEM */
+/* FOTO */
 
 .about-image {
-
     position: relative;
-
-    height: 620px;
-
+    min-height: 650px;
 }
-
-
-.about-image img {
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: center;
-
-}
-
 
 .about-image::before {
-
     content: "";
-
     position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    top: 20px;
-    left: -20px;
-
-    border: 1px solid var(--gold);
-
+    top: -18px;
+    left: -18px;
+    width: 75%;
+    height: 75%;
+    border: 1px solid rgba(166, 163, 58, .55);
     z-index: 0;
-
 }
-
 
 .about-image img {
-
     position: relative;
-
     z-index: 1;
 
+    width: 100%;
+    height: 650px;
+
+    object-fit: cover;
+    object-position: top center;
 }
 
 
-/* CARD +10 */
+/* 12 ANOS */
 
 .about-detail {
-
     position: absolute;
-
-    right: -45px;
-    bottom: 45px;
-
     z-index: 2;
 
+    right: -35px;
+    bottom: 40px;
+
     width: 180px;
-    height: 180px;
-
-    background: var(--gold);
-
-    color: white;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
+    min-height: 150px;
 
     padding: 25px;
 
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    background: var(--gold);
+    color: white;
+}
 
 .about-detail span {
-
     font-family: 'Cormorant Garamond', serif;
-
     font-size: 60px;
-
     line-height: .8;
-
     font-weight: 600;
+}
 
+.about-detail p {
+    margin-top: 13px;
+
+    font-size: 9px;
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
-.about-detail p {
+/* =====================
+   TEXTO
+===================== */
+
+.about-content {
+    position: relative;
+    z-index: 2;
+}
+
+.about-content h2 {
+    max-width: 720px;
 
     margin-top: 15px;
 
-    font-size: 11px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 4.2vw, 65px);
 
-    line-height: 1.5;
+    line-height: .98;
+    font-weight: 500;
 
-    text-transform: uppercase;
+    color: white;
+}
 
-    letter-spacing: 1px;
+.about-content h2 span {
+    display: block;
+    color: var(--gold-light);
+}
 
+.about-content .gold-line {
+    width: 65px;
+    height: 2px;
+
+    margin: 30px 0;
+
+    background: var(--gold);
+}
+
+.about-content p {
+    max-width: 700px;
+
+    margin-bottom: 17px;
+
+    color: #aeb7bf;
+
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.about-content .about-lead {
+    color: #dce1e5;
+    font-size: 14px;
+}
+
+.about-content strong {
+    color: white;
+    font-weight: 500;
 }
 
 
-/* CONTEÚDO */
+/* =====================
+   ÁREAS
+===================== */
 
-.section-tag {
+.about-areas {
+    margin-top: 90px;
 
+    padding: 40px 0;
+
+    display: grid;
+    grid-template-columns: .35fr 1.65fr;
+
+    gap: 70px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.about-small-title {
     color: var(--gold-light);
 
-    font-size: 11px;
-
-    letter-spacing: 4px;
-
+    font-size: 9px;
     font-weight: 600;
 
+    letter-spacing: 2px;
+}
+
+.about-areas p {
+    max-width: 900px;
+
+    color: #aeb7bf;
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.about-areas strong {
+    color: white;
+    font-weight: 500;
 }
 
 
-.about-content h2 {
+/* =====================
+   NOSSA FORMA DE ATUAR
+===================== */
 
-    max-width: 650px;
+.about-method {
+    padding: 100px 0;
+}
 
-    margin-top: 20px;
+.about-method-header {
+    display: grid;
+
+    grid-template-columns: .55fr 1.45fr;
+
+    gap: 70px;
+
+    align-items: start;
+
+    margin-bottom: 55px;
+}
+
+.about-method-header h3 {
+    max-width: 700px;
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: clamp(42px, 4vw, 62px);
+    font-size: clamp(38px, 3.5vw, 55px);
 
-    line-height: 1.05;
+    line-height: 1;
 
     font-weight: 500;
 
     color: white;
-
 }
 
-
-.about-content h2 span {
-
+.about-method-header h3 span {
     color: var(--gold-light);
-
 }
 
 
-.gold-line {
+/* PRINCÍPIOS */
 
-    width: 70px;
-    height: 1px;
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 
-    background: var(--gold);
-
-    margin: 30px 0;
-
+    border-top: 1px solid rgba(255,255,255,.12);
 }
 
+.about-value {
+    min-height: 245px;
 
-.about-content p {
+    padding: 30px 25px;
 
-    max-width: 620px;
-
-    color: #bec5cc;
-
-    font-size: 15px;
-
-    line-height: 1.9;
-
-    margin-bottom: 18px;
-
+    border-right: 1px solid rgba(255,255,255,.12);
 }
 
+.about-value:first-child {
+    border-left: 1px solid rgba(255,255,255,.12);
+}
 
-.about-link {
+.about-value > span {
+    color: var(--gold);
 
-    display: inline-flex;
+    font-size: 9px;
 
-    align-items: center;
+    letter-spacing: 1px;
+}
 
-    gap: 14px;
+.about-value h4 {
+    margin-top: 35px;
 
-    margin-top: 18px;
+    font-family: 'Cormorant Garamond', serif;
 
     color: white;
 
-    font-size: 12px;
+    font-size: 24px;
+    font-weight: 500;
+}
 
-    font-weight: 600;
+.about-value p {
+    margin-top: 13px;
 
-    text-transform: uppercase;
+    color: #929da6;
 
-    letter-spacing: 1px;
-
-    transition: .3s;
-
+    font-size: 10px;
+    line-height: 1.8;
 }
 
 
-.about-link i {
+/* =====================
+   FECHAMENTO
+===================== */
 
+.about-closing {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    padding: 80px max(
+        calc((100vw - 1200px) / 2),
+        5%
+    );
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    background: #07111b;
+}
+
+.about-closing-title > span {
     color: var(--gold);
 
-    transition: .3s;
+    font-size: 9px;
+    font-weight: 600;
 
+    letter-spacing: 2px;
 }
 
+.about-closing-title h3 {
+    max-width: 570px;
 
-.about-link:hover {
+    margin-top: 15px;
 
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(34px, 3vw, 48px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    color: white;
+}
+
+.about-closing-title h3 strong {
     color: var(--gold-light);
+    font-weight: 500;
+}
 
+.about-closing-text {
+    padding-top: 20px;
+}
+
+.about-closing-text p {
+    margin-bottom: 18px;
+
+    color: #98a3ac;
+
+    font-size: 11px;
+    line-height: 1.9;
 }
 
 
-.about-link:hover i {
+/* =====================
+   RESPONSIVO
+===================== */
 
-    transform: translateX(6px);
+@media (max-width: 1100px) {
 
-}
-
-
-/* RESPONSIVO */
-
-@media (max-width: 900px) {
-
-    .about {
-
-        padding: 90px 0;
-
+    .about-top {
+        gap: 60px;
     }
 
+    .about-values {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-    .about-container {
+    .about-value {
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
 
+}
+
+
+@media (max-width: 850px) {
+
+    .about {
+        padding-top: 90px;
+    }
+
+    .about-top {
         grid-template-columns: 1fr;
-
-        gap: 70px;
-
     }
-
 
     .about-image {
-
-        max-width: 550px;
-
+        min-height: auto;
+        max-width: 600px;
     }
 
+    .about-image img {
+        height: 600px;
+    }
 
     .about-detail {
-
         right: 20px;
+    }
 
+    .about-areas {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .about-method-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-closing {
+        grid-template-columns: 1fr;
+        gap: 35px;
     }
 
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     .about {
-
-        padding: 70px 0;
-
+        padding-top: 75px;
     }
 
-
-    .about-image {
-
-        height: 520px;
-
+    .about-image img {
+        height: 500px;
     }
-
 
     .about-detail {
-
-        width: 140px;
-        height: 140px;
+        width: 145px;
+        min-height: 125px;
 
         right: 15px;
         bottom: 20px;
-
     }
-
 
     .about-detail span {
-
         font-size: 48px;
-
     }
 
-
     .about-content h2 {
+        font-size: 43px;
+    }
 
-        font-size: 41px;
+    .about-areas {
+        margin-top: 60px;
+    }
 
+    .about-method {
+        padding: 75px 0;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+
+    .about-value {
+        min-height: auto;
+        padding: 28px 10px;
+        border-right: 0;
+        border-left: 0 !important;
+    }
+
+    .about-value h4 {
+        margin-top: 15px;
+    }
+
+    .about-closing {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
 }
@@ -1169,6 +1289,25 @@ a {
     transition:
         transform .35s ease,
         background .35s ease;
+}
+
+.service-number {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    color: #d5d3cb;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+
+    transition: .3s;
+}
+
+.service-card:hover .service-number {
+    color: var(--gold);
 }
 
 
@@ -3988,4 +4127,981 @@ a {
         gap: 10px;
     }
 
+}
+
+/* ========================================
+   PÁGINAS - ÁREAS DE ATUAÇÃO
+======================================== */
+
+
+/* HERO */
+
+.area-hero {
+    padding: 155px 0 90px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(7,17,27,.98),
+            rgba(11,23,36,.93)
+        );
+
+    color: white;
+}
+
+
+.area-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 70px;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.area-breadcrumb a {
+    color: #8f9aa3;
+    transition: .3s;
+}
+
+.area-breadcrumb a:hover {
+    color: var(--gold-light);
+}
+
+.area-breadcrumb i {
+    font-size: 7px;
+    color: var(--gold);
+}
+
+.area-breadcrumb span {
+    color: white;
+}
+
+
+.area-hero-content {
+    display: grid;
+
+    grid-template-columns: 1.25fr .75fr;
+
+    gap: 100px;
+
+    align-items: end;
+}
+
+
+.area-hero h1 {
+    margin-top: 15px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(60px, 7vw, 100px);
+
+    line-height: .85;
+
+    font-weight: 500;
+}
+
+.area-hero h1 span {
+    display: block;
+    color: var(--gold-light);
+}
+
+
+.area-hero-description {
+    padding-bottom: 5px;
+}
+
+.area-hero-description p {
+    max-width: 440px;
+
+    color: #aab3bb;
+
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+.area-btn {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 28px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid var(--gold);
+
+    color: white;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+.area-btn i {
+    color: var(--gold);
+    transition: .3s;
+}
+
+.area-btn:hover {
+    color: var(--gold-light);
+}
+
+.area-btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ========================================
+   INTRODUÇÃO
+======================================== */
+
+.area-intro {
+    padding: 110px 0;
+
+    background: var(--off-white);
+}
+
+
+.area-intro-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 120px;
+
+    align-items: start;
+}
+
+
+.area-intro-title > span {
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.area-intro-title h2 {
+    margin-top: 15px;
+
+    max-width: 580px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    line-height: 1;
+
+    color: var(--navy);
+
+    font-weight: 500;
+}
+
+
+.area-intro-title h2 strong {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+
+.area-intro-text {
+    padding-top: 25px;
+}
+
+
+.area-intro-text p {
+    margin-bottom: 20px;
+
+    color: #687078;
+
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* ========================================
+   SERVIÇOS / ACCORDION
+======================================== */
+
+.area-services {
+    padding: 110px 0;
+
+    background: white;
+}
+
+
+.area-services-header {
+    margin-bottom: 60px;
+}
+
+
+.area-services-header h2 {
+    margin-top: 15px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(40px, 4vw, 60px);
+
+    line-height: 1;
+
+    color: var(--navy);
+
+    font-weight: 500;
+}
+
+
+.area-services-header h2 span {
+    color: var(--gold);
+}
+
+
+.area-accordion {
+    border-top: 1px solid #dddcd5;
+}
+
+
+.area-item {
+    border-bottom: 1px solid #dddcd5;
+}
+
+
+.area-item-header {
+    width: 100%;
+
+    padding: 28px 10px;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 50px;
+
+    align-items: center;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+
+.area-item-number {
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+.area-item-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    color: var(--navy);
+
+    transition: .3s;
+}
+
+
+.area-item-icon {
+    justify-self: end;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d4d2ca;
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+    transition: .3s;
+}
+
+
+.area-item-header:hover h3 {
+    color: var(--gold);
+}
+
+
+.area-item-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height .45s ease,
+        padding .45s ease;
+}
+
+
+.area-item-content p {
+    max-width: 750px;
+
+    margin-left: 80px;
+
+    color: #687078;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+}
+
+
+.area-item.active .area-item-content {
+    max-height: 300px;
+
+    padding: 0 0 30px;
+}
+
+
+.area-item.active .area-item-icon {
+    transform: rotate(45deg);
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: white;
+}
+
+
+.area-item.active .area-item-header h3 {
+    color: var(--gold);
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.area-cta {
+    padding: 85px 0;
+
+    background: var(--gold);
+}
+
+
+.area-cta-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+
+.area-cta-content > div > span {
+    color: rgba(255,255,255,.8);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.area-cta h2 {
+    max-width: 700px;
+
+    margin-top: 10px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(35px, 4vw, 52px);
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    color: white;
+}
+
+
+.area-cta h2 strong {
+    display: block;
+
+    font-weight: 600;
+}
+
+
+.area-cta p {
+    max-width: 650px;
+
+    margin-top: 15px;
+
+    color: rgba(255,255,255,.8);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+.area-cta-button {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 17px 24px;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+
+.area-cta-button:hover {
+    transform: translateY(-3px);
+
+    background: white;
+
+    color: var(--navy);
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 900px) {
+
+    .area-hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .area-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .area-cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .area-hero {
+        padding: 125px 0 70px;
+    }
+
+    .area-breadcrumb {
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .area-hero h1 {
+        font-size: 60px;
+    }
+
+    .area-intro,
+    .area-services {
+        padding: 75px 0;
+    }
+
+    .area-item-header {
+        grid-template-columns: 40px 1fr 40px;
+
+        padding: 23px 0;
+    }
+
+    .area-item-header h3 {
+        padding-right: 10px;
+        font-size: 21px;
+    }
+
+    .area-item-content p {
+        margin-left: 40px;
+        padding-right: 20px;
+    }
+
+}
+
+/* ==================================================
+   PERFIL DO ADVOGADO
+================================================== */
+
+/* HERO */
+.lawyer-hero {
+    background: var(--off-white);
+    padding: 150px 8% 90px;
+}
+
+.lawyer-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.lawyer-hero-text {
+    max-width: 650px;
+}
+
+.lawyer-label {
+    display: inline-block;
+    margin: 35px 0 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+.lawyer-hero h1 {
+    margin: 0 0 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(50px, 6vw, 78px);
+    line-height: .95;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.lawyer-specialties {
+    margin: 25px 0 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+}
+
+.lawyer-oab {
+    margin-bottom: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--navy);
+}
+
+.lawyer-introduction {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555;
+}
+
+
+/* FOTO */
+.lawyer-hero-photo {
+    position: relative;
+    height: 620px;
+    overflow: hidden;
+}
+
+.lawyer-hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.lawyer-photo-detail {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 210px;
+    padding: 22px 28px;
+    background: var(--navy);
+    color: white;
+}
+
+.lawyer-photo-detail span,
+.lawyer-photo-detail strong {
+    display: block;
+}
+
+.lawyer-photo-detail span {
+    margin-bottom: 3px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+}
+
+.lawyer-photo-detail strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+
+/* TRAJETÓRIA */
+.lawyer-about {
+    padding: 110px 8%;
+    background: white;
+}
+
+.lawyer-about-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 100px;
+}
+
+.lawyer-about-title h2 {
+    max-width: 470px;
+    margin-top: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    line-height: 1.05;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.lawyer-about-text {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.lawyer-about-text p {
+    margin: 0 0 22px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555;
+}
+
+
+/* ÁREAS DE ATUAÇÃO */
+.lawyer-practice {
+    padding: 110px 8%;
+    background: var(--navy);
+}
+
+.lawyer-practice-header {
+    max-width: 1200px;
+    margin: 0 auto 55px;
+}
+
+.lawyer-practice-header h2 {
+    margin-top: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 500;
+    color: white;
+}
+
+.lawyer-practice-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.lawyer-practice-card {
+    position: relative;
+    padding: 45px 35px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    transition: transform .3s ease,
+                border-color .3s ease,
+                background .3s ease;
+}
+
+.lawyer-practice-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, .03);
+}
+
+.lawyer-practice-number {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: rgba(255, 255, 255, .3);
+}
+
+.lawyer-practice-card > i {
+    margin-bottom: 35px;
+    font-size: 30px;
+    color: var(--gold);
+}
+
+.lawyer-practice-card h3 {
+    margin: 0 0 25px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+
+.lawyer-practice-card p {
+    margin: 0 0 18px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, .72);
+}
+
+.lawyer-practice-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.lawyer-practice-card a i {
+    transition: transform .3s ease;
+}
+
+.lawyer-practice-card a:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ATUAÇÃO INTEGRADA */
+.lawyer-integrated {
+    padding: 110px 8%;
+    background: var(--off-white);
+}
+
+.lawyer-integrated-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 100px;
+}
+
+.lawyer-integrated h2 {
+    max-width: 450px;
+    margin-top: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    line-height: 1.05;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.lawyer-integrated-text {
+    padding-top: 20px;
+    border-top: 1px solid #d5d3cb;
+}
+
+.lawyer-integrated-text p {
+    margin: 0 0 22px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555;
+}
+
+
+/* FRASE */
+.lawyer-quote {
+    padding: 120px 8%;
+    background: white;
+    text-align: center;
+}
+
+.lawyer-quote-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.lawyer-quote-content > i {
+    margin-bottom: 30px;
+    font-size: 35px;
+    color: var(--gold);
+}
+
+.lawyer-quote blockquote {
+    margin: 0 auto 35px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.lawyer-quote-author strong,
+.lawyer-quote-author span {
+    display: block;
+}
+
+.lawyer-quote-author strong {
+    margin-bottom: 7px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--navy);
+}
+
+.lawyer-quote-author span {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* ==================================================
+   RESPONSIVO - PERFIL
+================================================== */
+
+@media (max-width: 900px) {
+
+    .lawyer-hero {
+        padding: 130px 6% 70px;
+    }
+
+    .lawyer-hero-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .lawyer-hero-photo {
+        height: 600px;
+    }
+
+    .lawyer-about-grid,
+    .lawyer-integrated-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .lawyer-practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lawyer-about,
+    .lawyer-practice,
+    .lawyer-integrated,
+    .lawyer-quote {
+        padding: 80px 6%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .lawyer-hero {
+        padding: 110px 20px 55px;
+    }
+
+    .lawyer-hero h1 {
+        font-size: 48px;
+    }
+
+    .lawyer-hero-photo {
+        height: 480px;
+    }
+
+    .lawyer-photo-detail {
+        min-width: auto;
+        padding: 18px 20px;
+    }
+
+    .lawyer-about,
+    .lawyer-practice,
+    .lawyer-integrated,
+    .lawyer-quote {
+        padding: 65px 20px;
+    }
+
+    .lawyer-about-title h2,
+    .lawyer-integrated h2,
+    .lawyer-practice-header h2 {
+        font-size: 38px;
+    }
+
+    .lawyer-practice-card {
+        padding: 38px 25px;
+    }
+
+    .lawyer-quote blockquote {
+        font-size: 31px;
+    }
+
+}
+
+/* =========================================
+   DEPOIMENTOS - CORES
+========================================= */
+
+.testimonials .section-tag {
+    color: var(--gold);
+    opacity: 1;
+}
+
+.testimonials-header h2 {
+    color: white;
+}
+
+.testimonials-header h2 span {
+    color: var(--gold);
+}
+
+.testimonials-header > p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.about-content .section-tag {
+    color: var(--gold);
+    opacity: 1;
+}
+
+.about-content-header h2 {
+    color: white;
+}
+
+.about-content-header h2 span {
+    color: var(--gold);
+}
+
+.about-content-header > p {
+    color: rgba(255, 255, 255, 0.75);
 }
