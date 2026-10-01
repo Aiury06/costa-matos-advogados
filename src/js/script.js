@@ -296,3 +296,48 @@ if (areaHeaders.length) {
     });
 
 }
+
+/* =========================================
+   FORMULÁRIO DE CONTATO -> WHATSAPP
+========================================= */
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        // Impede o formulário de recarregar a página
+        event.preventDefault();
+
+        // Pega os dados preenchidos
+        const nome = document.getElementById("nome").value.trim();
+        const telefone = document.getElementById("telefone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const assunto = document.getElementById("assunto").value;
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        // Número da Costa e Matos
+        const numeroWhatsApp = "5561994092325";
+
+        // Monta a mensagem
+        const texto = `Olá, vim pelo site da Costa e Matos Advogados e gostaria de atendimento.
+
+*Nome:* ${nome}
+*Telefone:* ${telefone}
+*E-mail:* ${email || "Não informado"}
+*Assunto:* ${assunto}
+
+*Mensagem:*
+${mensagem}`;
+
+        // Converte a mensagem para uma URL válida
+        const urlWhatsApp =
+            `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+        // Abre o WhatsApp
+        window.open(urlWhatsApp, "_blank");
+
+    });
+
+}
