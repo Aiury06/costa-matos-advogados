@@ -1,5 +1,3 @@
-console.log("SCRIPT.JS CARREGADO!");
-
 
 /* ========================================
    MENU MOBILE
@@ -342,3 +340,29 @@ ${mensagem}`;
 
 }
 
+/* =====================================
+   TOP BAR - CONTROLE DE ROLAGEM
+   ===================================== */
+
+const topBar = document.getElementById("top-bar");
+
+if (topBar) {
+    let ultimaPosicao = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+        const posicaoAtual = window.scrollY;
+        const diferenca = posicaoAtual - ultimaPosicao;
+
+        if (posicaoAtual <= 20) {
+            document.body.classList.remove("topbar-hidden");
+        } else if (diferenca > 5) {
+            // Rolando para baixo
+            document.body.classList.add("topbar-hidden");
+        } else if (diferenca < -5) {
+            // Rolando para cima
+            document.body.classList.remove("topbar-hidden");
+        }
+
+        ultimaPosicao = posicaoAtual;
+    }, { passive: true });
+}
